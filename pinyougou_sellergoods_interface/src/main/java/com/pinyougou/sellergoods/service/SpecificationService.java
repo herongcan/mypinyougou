@@ -1,14 +1,30 @@
 package com.pinyougou.sellergoods.service;
-import java.util.List;
-import com.pinyougou.pojo.TbSpecification;
 
+import com.pinyougou.pojo.TbSpecification;
+import com.pinyougou.pojogroup.Specification;
 import entity.PageResult;
+
+import java.util.List;
 /**
  * 业务逻辑接口
  * @author Steven
  *
  */
 public interface SpecificationService {
+
+	/**
+	 * 根据ID获取实体
+	 * @param id
+	 * @return
+	 */
+	public Specification findOne(Long id);
+
+
+	/**
+	 * 增加规格和选项的组合
+	 */
+	public void add(Specification specification);
+
 
 	/**
 	 * 返回全部列表
@@ -28,22 +44,14 @@ public interface SpecificationService {
 	 * 增加
 	*/
 	public void add(TbSpecification specification);
-	
-	
+
+
 	/**
 	 * 修改
 	 */
-	public void update(TbSpecification specification);
-	
+	public void update(Specification specification);
 
-	/**
-	 * 根据ID获取实体
-	 * @param id
-	 * @return
-	 */
-	public TbSpecification findOne(Long id);
-	
-	
+
 	/**
 	 * 批量删除
 	 * @param ids

@@ -1,4 +1,20 @@
 app.controller("baseController",function ($scope) {
+
+    //跟据需求输出json串
+    //jsonString要转换的json串,key要读取的值
+    $scope.jsonToString=function (jsonString,key) {
+        var json = JSON.parse(jsonString);
+        var result = "";
+        for(var i = 0;i < json.length; i++){
+            if(i > 0){
+                result += ",";
+            }
+            result += json[i][key];
+        }
+        return result;
+    }
+
+
     //分页控件属性配置
     $scope.paginationConf = {
         //当前页

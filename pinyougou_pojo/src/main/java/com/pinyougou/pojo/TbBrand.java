@@ -8,6 +8,12 @@ public class TbBrand implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    /**
+     * 添加get方法用于支持前端select2获取内容
+     */
+    public String getText(){
+        return this.name;
+    }
 
     /**
      * 品牌名称

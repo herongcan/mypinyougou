@@ -20,6 +20,14 @@ public class TbSpecification implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+
+    /**
+     * 添加get方法用于支持前端select2获取内容
+     */
+    public String getText(){
+        return this.specName;
+    }
+
     /**
      * 获取主键
      *
